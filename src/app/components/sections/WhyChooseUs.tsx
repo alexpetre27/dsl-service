@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
             De ce să ne alegi
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Zece motive pentru care AutoPremium este alegerea potrivită pentru vehiculul tău premium
+            Zece motive pentru care DSL Service este alegerea potrivită pentru vehiculul tău premium
           </p>
         </div>
 

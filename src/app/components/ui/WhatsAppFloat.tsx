@@ -20,7 +20,7 @@ export default function WhatsAppFloat() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const message = "Bună ziua! Sunt interessat de serviciile AutoPremium și aș dori să programez o consultație.";
+    const message = "Bună ziua! Sunt interesat de serviciile DSL Service și aș dori să programez o consultație.";
     const whatsappUrl = `https://wa.me/40123456789?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };

@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              AUTO<span className="text-accent">PREMIUM</span>
+              DSL <span className="text-accent">Service</span>
             </div>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Service auto premium pentru BMW, Mercedes, Audi și Porsche. 
@@ -135,7 +135,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Icon name="mail" size={18} className="text-accent flex-shrink-0" />
                 <div>
-                  <p className="text-sm">contact@autopremium.ro</p>
+                  <p className="text-sm">contact@dslservice.ro</p>
                 </div>
               </div>
               
@@ -188,7 +188,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-600">
-            <p>© {currentYear} AutoPremium Service SRL. Toate drepturile rezervate.</p>
+            <p>© {currentYear} DSL Service SRL. Toate drepturile rezervate.</p>
             <p className="mt-1">
               <a href="#" className="hover:text-accent transition-colors">Politica de confidențialitate</a>
               {' • '}

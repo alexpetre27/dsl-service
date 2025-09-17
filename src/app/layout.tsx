@@ -10,17 +10,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Service Auto Premium | BMW, Mercedes, Audi, Porsche | Stație ITP Autorizată",
-  description: "Service auto premium pentru mărci de top: BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale, garanție lucrări.",
-  keywords: "service auto, BMW, Mercedes, Audi, Porsche, ITP, service premium, diagnoză computerizată, reparații auto",
-  authors: [{ name: "Service Auto Premium" }],
+  title: "DSL Service | BMW, Mercedes, Audi, Porsche | Stație ITP Autorizată",
+  description: "DSL Service pentru mărci de top: BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale, garanție lucrări.",
+  keywords: "service auto, BMW, Mercedes, Audi, Porsche, ITP, diagnoză computerizată, reparații auto, DSL Service",
+  authors: [{ name: "DSL Service" }],
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "ro_RO",
-    title: "Service Auto Premium | Stație ITP Autorizată",
-    description: "Service auto premium pentru mărci de top. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale.",
-    siteName: "Service Auto Premium",
+    title: "DSL Service | Stație ITP Autorizată",
+    description: "DSL Service pentru mărci de top. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale.",
+    siteName: "DSL Service",
   },
 };
 

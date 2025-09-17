@@ -49,7 +49,6 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-20">
-          {/* Contact Form */}
           <div>
             <div className="bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-8">
@@ -57,7 +56,6 @@ export default function Contact() {
               </h3>
 
               <form id="contact-form" action={handleSubmit} className="space-y-6">
-                {/* Honeypot field for spam protection */}
                 <input
                   type="text"
                   name="honeypot"
@@ -151,7 +149,6 @@ export default function Contact() {
                   )}
                 </Button>
 
-                {/* Form feedback */}
                 {formState && (
                   <div role="status" aria-live="polite" className={`p-4 rounded-lg ${
                     formState.success 
@@ -165,9 +162,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Information */}
           <div className="space-y-8">
-            {/* Contact Details */}
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Informații de contact
@@ -220,7 +215,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* WhatsApp Contact */}
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <a 
                   href="https://wa.me/40123456789" 
@@ -236,8 +230,6 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-
-            {/* Map section removed per request */}
           </div>
         </div>
     </Container>

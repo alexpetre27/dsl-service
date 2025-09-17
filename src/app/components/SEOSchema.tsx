@@ -2,155 +2,159 @@ export default function SEOSchema() {
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
-      // Local Business Schema
       {
         "@type": "AutomotiveBusiness",
-        "@id": "https://autopremium.ro/#business",
-        "name": "AutoPremium Service",
-        "alternateName": "Service Auto Premium",
-        "description": "Service auto premium pentru BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR cu echipamente moderne și personal certificat.",
-        "url": "https://autopremium.ro",
-        "telephone": "+40123456789",
-        "email": "contact@autopremium.ro",
-        "address": {
+        "@id": "https://dslservice.ro/#business",
+        name: "DSL Service",
+        alternateName: "Service Auto",
+        description:
+          "Service auto premium pentru BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR cu echipamente moderne și personal certificat.",
+        url: "https://dslservice.ro",
+        telephone: "+40123456789",
+        email: "contact@dslservice.ro",
+        address: {
           "@type": "PostalAddress",
-          "streetAddress": "Strada Serviciului Nr. 123",
-          "addressLocality": "București",
-          "addressRegion": "Sector 1",
-          "postalCode": "010001",
-          "addressCountry": "RO"
+          streetAddress: "Strada Serviciului Nr. 123",
+          addressLocality: "București",
+          addressRegion: "Sector 1",
+          postalCode: "010001",
+          addressCountry: "RO",
         },
-        "geo": {
+        geo: {
           "@type": "GeoCoordinates",
-          "latitude": 44.4267674,
-          "longitude": 26.1025384
+          latitude: 44.4267674,
+          longitude: 26.1025384,
         },
-        "openingHoursSpecification": [
+        openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "18:00"
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "08:00",
+            closes: "18:00",
           },
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
-          }
+            dayOfWeek: "Saturday",
+            opens: "09:00",
+            closes: "14:00",
+          },
         ],
-        "priceRange": "$$",
-        "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-        "currenciesAccepted": "RON",
-        "areaServed": {
+        priceRange: "$$",
+        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
+        currenciesAccepted: "RON",
+        areaServed: {
           "@type": "City",
-          "name": "București"
+          name: "București",
         },
-        "hasOfferCatalog": {
+        hasOfferCatalog: {
           "@type": "OfferCatalog",
-          "name": "Servicii Auto Premium",
-          "itemListElement": [
+          name: "Servicii Auto DSL Service",
+          itemListElement: [
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Verificare ITP",
-                "description": "Inspecție tehnică periodică autorizată RAR"
-              }
+                name: "Verificare ITP",
+                description: "Inspecție tehnică periodică autorizată RAR",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Diagnoză computerizată",
-                "description": "Diagnoză avansată cu echipamente profesionale"
-              }
+                name: "Diagnoză computerizată",
+                description: "Diagnoză avansată cu echipamente profesionale",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Service climatizare",
-                "description": "Întreținere și reparații sistem climatizare"
-              }
+                name: "Service climatizare",
+                description: "Întreținere și reparații sistem climatizare",
+              },
             },
             {
               "@type": "Offer",
-              "itemOffered": {
+              itemOffered: {
                 "@type": "Service",
-                "name": "Reparații mecanice",
-                "description": "Reparații complexe motoare și componente mecanice"
-              }
-            }
-          ]
+                name: "Reparații mecanice",
+                description:
+                  "Reparații complexe motoare și componente mecanice",
+              },
+            },
+          ],
         },
-        "sameAs": [
-          "https://www.facebook.com/autopremium",
-          "https://www.instagram.com/autopremium"
+        sameAs: [
+          "https://www.facebook.com/dslservice",
+          "https://www.instagram.com/dslservice",
         ],
-        "logo": {
+        logo: {
           "@type": "ImageObject",
-          "url": "https://autopremium.ro/logo.png"
+          url: "https://dslservice.ro/logo.png",
         },
-        "image": [
-          "https://autopremium.ro/images/atelier.jpg",
-          "https://autopremium.ro/images/echipamente.jpg"
-        ]
+        image: [
+          "https://dslservice.ro/images/atelier.jpg",
+          "https://dslservice.ro/images/echipamente.jpg",
+        ],
       },
-      // Auto Inspection Station Schema
+
       {
         "@type": "AutomotiveBusiness",
-        "@id": "https://autopremium.ro/#itp-station",
-        "name": "AutoPremium - Stație ITP",
-        "description": "Stație ITP autorizată RAR cu echipamente moderne pentru toate tipurile de vehicule",
-        "parentOrganization": {
-          "@id": "https://autopremium.ro/#business"
+        "@id": "https://dslservice.ro/#itp-station",
+        name: "DSL Service - Stație ITP",
+        description:
+          "Stație ITP autorizată RAR cu echipamente moderne pentru toate tipurile de vehicule",
+        parentOrganization: {
+          "@id": "https://dslservice.ro/#business",
         },
-        "hasCredential": {
+        hasCredential: {
           "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Autorizare RAR",
-          "recognizedBy": {
+          credentialCategory: "Autorizare RAR",
+          recognizedBy: {
             "@type": "Organization",
-            "name": "Registrul Auto Român"
-          }
+            name: "Registrul Auto Român",
+          },
         },
-        "speciality": [
+        speciality: [
           "ITP autoturisme",
-          "ITP vehicule comerciale", 
+          "ITP vehicule comerciale",
           "ITP motociclete",
-          "Verificări emisii poluante"
-        ]
+          "Verificări emisii poluante",
+        ],
       },
-      // Website Schema
+
       {
         "@type": "WebSite",
-        "@id": "https://autopremium.ro/#website",
-        "url": "https://autopremium.ro",
-        "name": "AutoPremium Service",
-        "description": "Service auto premium pentru BMW, Mercedes, Audi, Porsche și stație ITP autorizată",
-        "publisher": {
-          "@id": "https://autopremium.ro/#business"
+        "@id": "https://dslservice.ro/#website",
+        url: "https://dslservice.ro",
+        name: "DSL Service",
+        description:
+          "Service auto premium pentru BMW, Mercedes, Audi, Porsche și stație ITP autorizată",
+        publisher: {
+          "@id": "https://dslservice.ro/#business",
         },
-        "inLanguage": "ro-RO"
+        inLanguage: "ro-RO",
       },
-      // Review Schema (example - you'd replace with real reviews)
+
       {
         "@type": "Review",
-        "reviewRating": {
+        reviewRating: {
           "@type": "Rating",
-          "ratingValue": 5,
-          "bestRating": 5
+          ratingValue: 5,
+          bestRating: 5,
         },
-        "author": {
+        author: {
           "@type": "Person",
-          "name": "Ion Popescu"
+          name: "Ion Popescu",
         },
-        "reviewBody": "Servicii profesionale pentru BMW-ul meu. Personal competent și prețuri corecte.",
-        "itemReviewed": {
-          "@id": "https://autopremium.ro/#business"
-        }
-      }
-    ]
+        reviewBody:
+          "Servicii profesionale pentru BMW-ul meu. Personal competent și prețuri corecte.",
+        itemReviewed: {
+          "@id": "https://dslservice.ro/#business",
+        },
+      },
+    ],
   };
 
   return (

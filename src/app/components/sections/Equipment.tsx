@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "../ui/Card";
 import Icon from "../ui/Icon";
 import Skeleton from "../ui/Skeleton";
@@ -12,7 +13,7 @@ export default function Equipment() {
       description:
         "Echipament de ultimă generație pentru diagnoză computerizată avansată",
       features: ["BMW ICOM", "Mercedes STAR", "Audi VAS", "Porsche PIWIS"],
-      image: "[Scanner diagnoză profesional conectat la vehicul]",
+      image: "/tester.png",
     },
     {
       icon: "star",
@@ -20,7 +21,7 @@ export default function Equipment() {
       description:
         "Sistem de ridicare profesional pentru acces complet sub vehicul",
       features: ["Capacitate 4 tone", "Ridicare uniformă", "Siguranță maximă"],
-      image: "[Elevator 4 coloane cu mașină premium ridicate]",
+      image: "/elevator.jpg",
     },
     {
       icon: "check",
@@ -32,7 +33,7 @@ export default function Equipment() {
         "Recirculare agent",
         "Vacuum profesional",
       ],
-      image: "[Stație climatizare cu afișaj digital și furtunuri]",
+      image: "/statie_climatizare.jpg",
     },
     {
       icon: "shield",
@@ -40,14 +41,14 @@ export default function Equipment() {
       description:
         "Cameră profesională pentru lucrări de caroserie și vopsitorie",
       features: ["Filtrare aer", "Control temperatură", "Iluminare LED"],
-      image: "[Cameră de vopsit cu vehicul în interior și sistem de filtrare]",
+      image: "/camera_vopsit.jpg",
     },
     {
       icon: "award",
       title: "Stand geometrie 3D",
       description: "Măsurare și reglare precisă pentru geometria roților",
       features: ["Măsurare 3D", "Calibrare automată", "Raport detaliat"],
-      image: "[Stand geometrie cu senzori montați pe roți]",
+      image: "/stand_geom.jpg",
     },
     {
       icon: "wrench",
@@ -59,7 +60,7 @@ export default function Equipment() {
         "Chei dinamometrice",
         "Extractor injectoare",
       ],
-      image: "[Set de unelte organizat în dulap cu compartimente]",
+      image: "/unelte.png",
     },
   ];
 
@@ -82,10 +83,15 @@ export default function Equipment() {
               key={index}
               className="card-hover border-0 shadow-sm overflow-hidden bg-white/90 backdrop-blur-sm p-0"
             >
-              <div className="relative h-48">
-                <Skeleton className="absolute inset-0" />
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-xs text-center p-4">
-                  {item.image}
+              <div className="relative h-48 bg-white">
+                <Skeleton className="absolute inset-0 bg-white" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
                 </div>
               </div>
 

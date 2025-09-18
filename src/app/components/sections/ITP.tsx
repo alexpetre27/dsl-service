@@ -5,6 +5,7 @@ import { Card } from "../ui/Card";
 import Icon from "../ui/Icon";
 import Section from "../ui/Section";
 import Container from "../ui/Container";
+import Image from "next/image";
 
 export default function ITP() {
   const scrollToContact = () => {
@@ -88,10 +89,14 @@ export default function ITP() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center text-gray-500 text-sm">
-              [Linie ITP, aparat măsurare gaze, inspector la lucru]
-            </div>
+          <div className="relative flex justify-center items-center">
+            <Image
+              src="/statie_itp.jpg"
+              alt="Stație ITP Autorizată RAR"
+              width={500}
+              height={500}
+              className="rounded-xl mx-auto"
+            />
           </div>
         </div>
 
@@ -139,7 +144,7 @@ export default function ITP() {
               className="px-8 py-4 text-lg font-semibold"
             >
               <Icon name="phone" size={20} className="mr-2" />
-              Rezervă Slot ITP
+              Rezervă-ți locul acum!
             </Button>
           </div>
         </div>

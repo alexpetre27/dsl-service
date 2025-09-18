@@ -10,22 +10,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DSL Service | BMW, Mercedes, Audi, Porsche | Stație ITP Autorizată",
-  description: "DSL Service pentru mărci de top: BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale, garanție lucrări.",
-  keywords: "service auto, BMW, Mercedes, Audi, Porsche, ITP, diagnoză computerizată, reparații auto, DSL Service",
+  title:
+    "DSL Cars Garage | BMW, Mercedes, Audi, Porsche | Stație ITP Autorizată",
+  description:
+    "DSL Cars Garage Service pentru mărci de top: BMW, Mercedes, Audi, Porsche. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale, garanție lucrări.",
+  keywords:
+    "service auto, BMW, Mercedes, Audi, Porsche, ITP, diagnoză computerizată, reparații auto, DSL Cars Garage Service",
   authors: [{ name: "DSL Service" }],
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "ro_RO",
-    title: "DSL Service | Stație ITP Autorizată",
-    description: "DSL Service pentru mărci de top. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale.",
-    siteName: "DSL Service",
+    title: "DSL Cars Garage | Stație ITP Autorizată",
+    description:
+      "DSL Cars Garage Service pentru mărci de top. Stație ITP autorizată RAR. Diagnoză computerizată, reparații profesionale.",
+    siteName: "DSL Cars Garage",
   },
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
@@ -38,7 +42,11 @@ export default function RootLayout({
     <html lang="ro" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <SkipToContent />

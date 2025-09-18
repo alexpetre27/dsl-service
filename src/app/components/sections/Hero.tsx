@@ -11,12 +11,8 @@ export default function Hero() {
   };
 
   return (
-    <Section
-      id="home"
-      className="relative overflow-hidden pt-20 sm:pt-24 lg:pt-28 pb-0"
-    >
+    <Section id="home" className="relative overflow-hidden pb-0">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-white" />
-
       <div
         className="absolute -top-24 -right-20 w-[36rem] h-[36rem] rounded-full opacity-20 blur-3xl"
         style={{
@@ -31,17 +27,16 @@ export default function Hero() {
       />
 
       <Container>
-        <div className="relative z-10 py-16 sm:py-24 lg:py-28 min-h-[72vh] flex items-center">
-          <div className="grid lg:grid-cols-12 gap-10 w-full items-center">
+        <div className="relative z-10 py-4 sm:py-8 lg:py-10 min-h-[65vh] flex items-center">
+          <div className="grid lg:grid-cols-12 gap-8 w-full items-center">
             <div className="lg:col-span-7 text-gray-900">
-              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-6 border border-accent/20">
+              <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full mb-5 border border-accent/20">
                 <Icon name="star" size={18} className="text-accent" />
                 <span className="text-sm font-medium">
                   Service auto premium • Stație ITP autorizată
                 </span>
               </div>
-
-              <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight leading-tight mb-5">
                 Excelență în service auto
                 <span
                   className="block mt-1 bg-clip-text text-transparent"
@@ -52,19 +47,21 @@ export default function Hero() {
                   pentru mărci PREMIUM
                 </span>
               </h1>
-
-              <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed mb-10">
+              <p className="text-lg md:text-2xl text-gray-600 max-w-2xl leading-relaxed mb-8">
                 Întreținere, diagnoză și reparații cu standarde de showroom.
                 Rapid, transparent, garantat.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
                 <Button
                   size="lg"
                   className="px-8"
                   onClick={() => scrollTo("itp-section")}
                 >
-                  <Icon name="shield" size={20} className="mr-2" />
+                  <Icon
+                    name="shield"
+                    size={20}
+                    className="mr-2 font-semibold"
+                  />
                   Programează ITP
                 </Button>
                 <Button
@@ -76,8 +73,7 @@ export default function Hero() {
                   Vezi Servicii
                 </Button>
               </div>
-
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-gray-600">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Icon name="check" size={18} className="text-accent" />
                   Garanție lucrări
@@ -92,32 +88,31 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-
             <div className="lg:col-span-5 hidden lg:block">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="rounded-2xl p-6 shadow-sm bg-white border border-gray-200">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-4">
+              <div className="grid grid-cols-2 gap-5">
+                <div className="rounded-2xl p-5 shadow-sm bg-white border border-gray-200 flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-3">
                     <Icon name="wrench" size={22} className="text-accent" />
                   </div>
-                  <h3 className="text-gray-900 font-semibold mb-1">
+                  <h3 className="text-gray-900 font-semibold mb-1 text-center">
                     Diagnoză avansată
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm text-center">
                     Echipamente OEM pentru mărci premium
                   </p>
                 </div>
-                <div className="rounded-2xl p-6 shadow-sm bg-white border border-gray-200">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-4">
+                <div className="rounded-2xl p-5 shadow-sm bg-white border border-gray-200 flex flex-col items-center">
+                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-3">
                     <Icon name="shield" size={22} className="text-accent" />
                   </div>
-                  <h3 className="text-gray-900 font-semibold mb-1">
+                  <h3 className="text-gray-900 font-semibold mb-1 text-center">
                     Stație ITP
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 text-sm text-center">
                     Autorizată RAR, raport clar
                   </p>
                 </div>
-                <div className="rounded-2xl p-6 shadow-sm bg-white border border-gray-200 col-span-2">
+                <div className="rounded-2xl p-5 shadow-sm bg-white border border-gray-200 col-span-2">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
                       <Icon name="star" size={22} className="text-accent" />
@@ -135,7 +130,6 @@ export default function Hero() {
           </div>
         </div>
       </Container>
-
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent" />
     </Section>
   );

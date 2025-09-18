@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Button from "../ui/Button";
 import Icon from "../ui/Icon";
 import Container from "../ui/Container";
@@ -36,11 +37,14 @@ export default function Navigation() {
     >
       <Container>
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-black">
-              DSL <span className="text-accent">Service</span>
-            </div>
-          </div>
+          <Image
+            src="/dsl_icon.png"
+            alt="DSL Service Logo"
+            width={75}
+            height={75}
+            className="cursor-pointer"
+            onClick={() => scrollToSection("home")}
+          />
 
           <div className="hidden lg:flex items-center space-x-8">
             <button

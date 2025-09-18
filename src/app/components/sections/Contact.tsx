@@ -1,37 +1,73 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import { submitContactForm } from "../../actions/contact";
-import Button from "../ui/Button";
-import Input from "../ui/Input";
-import TextArea from "../ui/TextArea";
-import Icon from "../ui/Icon";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import { useState } from "react";
+import Button from "@/components/ui/Button";
+import Input from "@/components/ui/Input";
+import TextArea from "@/components/ui/TextArea";
+import Icon from "@/components/ui/Icon";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 interface FormState {
   success: boolean;
   message: string;
-  errors?: {
-    [key: string]: string;
-  };
+  errors?: { [key: string]: string };
 }
 
 export default function Contact() {
   const [formState, setFormState] = useState<FormState | null>(null);
-  const [isPending, startTransition] = useTransition();
+  const [isPending, setIsPending] = useState(false);
 
-  const handleSubmit = async (formData: FormData) => {
-    startTransition(async () => {
-      const result = await submitContactForm(formData);
-      setFormState(result);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setFormState(null);
+    setIsPending(true);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      email: String(fd.get("email") || "").trim(),
+      phone: String(fd.get("phone") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      honeypot: String(fd.get("honeypot") || ""),
+    };
 
-      if (result.success) {
-        const form = document.getElementById("contact-form") as HTMLFormElement;
-        form?.reset();
+    if (payload.honeypot) {
+      setIsPending(false);
+      return; // silently drop spam
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Eroare la trimiterea mesajului");
       }
-    });
-  };
+
+      setFormState({
+        success: true,
+        message:
+          "Mulțumim! Mesajul a fost trimis. Vă contactăm în cel mai scurt timp.",
+      });
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      setFormState({
+        success: false,
+        message:
+          err instanceof Error
+            ? err.message
+            : "A apărut o eroare. Vă rugăm să încercați din nou.",
+      });
+    } finally {
+      setIsPending(false);
+    }
+  }
 
   return (
     <Section id="contact" className="bg-gray-50">
@@ -55,7 +91,7 @@ export default function Contact() {
 
               <form
                 id="contact-form"
-                action={handleSubmit}
+                onSubmit={handleSubmit}
                 className="space-y-6"
               >
                 <input

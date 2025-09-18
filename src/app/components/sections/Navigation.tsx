@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Button from "../ui/Button";
-import Icon from "../ui/Icon";
-import Container from "../ui/Container";
+import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
+import Container from "@/components/ui/Container";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

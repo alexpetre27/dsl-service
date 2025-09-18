@@ -1,10 +1,10 @@
 "use client";
 
-import Button from "../ui/Button";
-import { Card } from "../ui/Card";
-import Icon from "../ui/Icon";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import Button from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import Icon from "@/components/ui/Icon";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 import Image from "next/image";
 
 export default function ITP() {

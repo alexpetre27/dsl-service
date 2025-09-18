@@ -1,7 +1,7 @@
 "use client";
 
-import Icon from "../ui/Icon";
-import Container from "../ui/Container";
+import Icon from "@/components/ui/Icon";
+import Container from "@/components/ui/Container";
 import Image from "next/image";
 import { Facebook, Instagram, PhoneCall } from "lucide-react";
 
@@ -23,9 +23,7 @@ export default function Footer() {
     <footer className="bg-white text-gray-900 border-t border-gray-200">
       <Container>
         <div className="py-16">
-          {/* Grid principal */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
-            {/* Logo + descriere + social */}
             <div>
               <div className="flex flex-col items-center md:items-start mb-4">
                 <div className="flex items-start gap-2">
@@ -76,7 +74,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Navigare rapidă */}
             <div>
               <h3 className="text-lg font-semibold mb-4 text-center md:text-left">
                 Navigare rapidă
@@ -113,7 +110,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Servicii principale */}
             <div>
               <h3 className="text-lg font-semibold mb-4">
                 Servicii principale
@@ -134,7 +130,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-3">
@@ -193,7 +188,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Certificări */}
           <div className="border-t border-gray-200 mt-12 pt-8 text-center">
             <h4 className="text-lg font-semibold mb-4">
               Certificări și autorizări
@@ -213,7 +207,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Copyright + back to top */}
           <div className="border-t border-gray-200 pt-8 flex flex-col items-center gap-4 md:flex-row md:justify-between">
             <div className="text-sm text-gray-600 text-center md:text-left">
               <p>

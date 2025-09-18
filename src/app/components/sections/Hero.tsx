@@ -1,9 +1,9 @@
 "use client";
 
-import Button from "../ui/Button";
-import Icon from "../ui/Icon";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 export default function Hero() {
   const scrollTo = (id: string) => {

@@ -1,6 +1,6 @@
-import Icon from "../ui/Icon";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import Icon from "@/components/ui/Icon";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 export default function Process() {
   const processSteps = [

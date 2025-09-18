@@ -1,8 +1,9 @@
 "use client";
 
-import Accordion from "../ui/Accordion";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import Accordion from "@/components/ui/Accordion";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+
 import { MessageSquareText, Phone } from "lucide-react";
 
 export default function FAQ() {

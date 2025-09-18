@@ -1,10 +1,10 @@
 "use client";
 
-import { Card, CardContent, CardHeader } from "../ui/Card";
-import Button from "../ui/Button";
-import Icon from "../ui/Icon";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import { Card, CardContent, CardHeader } from "@/components/ui/Card";
+import Button from "@/components/ui/Button";
+import Icon from "@/components/ui/Icon";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 export default function Services() {
   const services = [

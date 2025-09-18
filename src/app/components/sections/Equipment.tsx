@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Card, CardContent } from "../ui/Card";
-import Icon from "../ui/Icon";
-import Skeleton from "../ui/Skeleton";
-import Section from "../ui/Section";
-import Container from "../ui/Container";
+import { Card, CardContent } from "@/components/ui/Card";
+import Icon from "@/components/ui/Icon";
+import Skeleton from "@/components/ui/Skeleton";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 export default function Equipment() {
   const equipment = [

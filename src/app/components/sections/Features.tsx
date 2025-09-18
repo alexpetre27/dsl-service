@@ -1,6 +1,7 @@
-import Section from "../ui/Section";
-import Container from "../ui/Container";
-import FeatureCard from "../ui/FeatureCard";
+import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
+import FeatureCard from "@/components/ui/FeatureCard";
+
 import { Phone, FileCheck2, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export default function Features() {

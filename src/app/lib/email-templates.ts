@@ -15,8 +15,8 @@ function wrap(content: string, title: string) {
     <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:700px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb">
       <thead>
         <tr>
-          <td style="padding:18px 20px;background:#7f1d1d;color:#ffffff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif">
-            <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;opacity:.9">Lectii de Engleza</div>
+          <td style="padding:18px 20px;background:#111827;color:#ffffff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial,'Noto Sans',sans-serif">
+            <div style="font-size:12px;letter-spacing:1.2px;text-transform:uppercase;opacity:.9">DSL Garage — Service auto & ITP</div>
             <div style="font-size:20px;font-weight:500;margin-top:4px">${title}</div>
           </td>
         </tr>
@@ -77,6 +77,19 @@ export const templates = {
   newsletter(email: string) {
     return renderSections("Abonare Newsletter", [
       { label: "Email", value: email },
+    ]);
+  },
+  contact(data: {
+    name: string;
+    email: string;
+    phone?: string;
+    message?: string;
+  }) {
+    return renderSections("Mesaj din formularul de contact", [
+      { label: "Nume", value: data.name },
+      { label: "Email", value: data.email },
+      { label: "Telefon", value: data.phone },
+      { label: "Mesaj", value: data.message },
     ]);
   },
   // Use the specific ScheduleData interface instead of Record<string, any>

@@ -1,0 +1,27 @@
+# Node
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next
+out
+.cache
+
+# Env files (uncomment if you don't want to send them in build context)
+# .env
+# .env.local
+# .env.production
+
+# VCS
+.git
+.gitignore
+
+# OS
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml

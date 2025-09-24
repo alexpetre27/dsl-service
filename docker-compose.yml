@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dsl-service:latest
+    container_name: dsl-service
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # Set NODE_ENV and PORT; pull other secrets from .env file
+      NODE_ENV: production
+      PORT: 3000
+    env_file:
+      - .env
+    # If you want to run with less memory overhead, uncomment below to set Node memory
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 512M
+    #     reservations:
+    #       memory: 256M
+    # If you use a reverse proxy (Traefik/Nginx), add labels here
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.dsl.rule=Host(`example.com`)"
+    #   - "traefik.http.routers.dsl.entrypoints=websecure"
+    #   - "traefik.http.routers.dsl.tls=true"
